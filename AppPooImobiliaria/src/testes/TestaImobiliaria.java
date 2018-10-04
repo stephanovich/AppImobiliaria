@@ -39,14 +39,22 @@ public class TestaImobiliaria {
 		casa.setProprietario(p);
 		casa.setInformacao(i);
 
-		
+		Calendar dataPublicAp = Calendar.getInstance();
+		DateFormat dfAp = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        try {
+            Date dataAp = (Date)dfAp.parse("04/10/2018 18:31");            
+            dataPublicAp.setTime(dataAp);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}  
+        
 		Informacao i2 = new Informacao(8000,200,110,true,2000);
 		
 		Proprietario p2 = new Proprietario("Maria Zinha","(21) 91234-5678");
 		p2.setCpf("119-876-543-21-00");
 		
 		Apartamento apartamento = new Apartamento("2A","Rua aaabbb, 215, rio de janeiro - RJ");
-		apartamento.setDatadoAnuncio(dataPublic);
+		apartamento.setDatadoAnuncio(dataPublicAp);
 		String[] comodos2 = {"4 quartos","Sala","Cozinha","3 Banheiros","4 Vagas na garagem"};
 		apartamento.setComodos(comodos2);
 		apartamento.setComplemento("Apartamento 315 - Bloco B");

@@ -12,9 +12,10 @@ public class Imobiliaria implements Exibir{
 	
 	public void exibir() {
 		System.err.println("------------------------------------------------------");
-		System.err.printf("Imobiliaria: %s\nEndereço: %s\n",
+		System.err.printf("Imobiliaria: %s\nEndereço: %s\nContato: %s\n",
 				nome,
-				endereco
+				endereco,
+				contato
 				);
 		System.err.println("------------------------------------------------------");
 		imprimirLista();
